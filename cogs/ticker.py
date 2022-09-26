@@ -38,7 +38,7 @@ class GetTickerPrice(commands.Cog):
             await self.client.change_presence(
                 activity=discord.Activity(
                     type=discord.ActivityType.watching,
-                    name=f'{self.convert_symbol}{price}'
+                    name=f'{self.convert_symbol}{price:.2f}'
                 )
             )
         except Exception as error:
